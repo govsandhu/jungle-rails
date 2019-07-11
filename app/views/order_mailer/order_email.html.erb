@@ -1,15 +1,19 @@
-<section class="orders-show">
-
-  <header class="page-header">
-    <h1>Order #<%= @order.id %> has been placed by <%= current_user.email %></h1>
-  </header>
-
-  <div class="order-summary jumbotron">
-    <div class="panel panel-default items">
-    <table class="table table-bordered">
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Thank you for your purchase!</h1>
+    <br>
+    <h2> Here are your details: </h2>
+    <br>
+<div >
+    <div >
+    <table >
       <thead>
         <tr>
-          <th colspan="2">Product</th>
+          <th>Product</th>
           <th>Unit Price</th>
           <th>Quantity</th>
           <th>Price</th>
@@ -32,12 +36,7 @@
       </tfoot>
     </table>
   </div>
-
-    <h4>Thank you for your order!</h4>
-    
-  </div>
-
-  
-  <%= link_to "Continue Shopping", root_path, class: 'btn btn-lg btn-primary' %>
-
-</section>
+    <br>
+    <p>Thanks for joining and have a great day!</p>
+  </body>
+</html>
