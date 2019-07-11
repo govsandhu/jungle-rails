@@ -4,6 +4,10 @@
     <h1>My Cart</h1>
   </header>
 
+
+  <% if cart.size == 0%>
+  <h4> Hi! It looks like your cart is empty. Please add some items to your cart to checkout </h4>
+  <% else %>
   <div class="panel panel-default items">
     <table class="table table-bordered">
       <thead>
@@ -31,6 +35,7 @@
       </tfoot>
     </table>
   </div>
+  
 
   <div class="row">
     <div class="col-xs-12">
@@ -48,5 +53,6 @@
       <% end %>
     </div>
   </div>
+  <% end %>
 
 </section>
