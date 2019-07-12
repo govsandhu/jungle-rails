@@ -6,7 +6,8 @@
 
 
   <% if cart.size == 0%>
-  <h4> Hi! It looks like your cart is empty. Please add some items to your cart to checkout </h4>
+    <h4> Hi! It looks like your cart is empty. Please add some items to your cart to checkout. </h4>
+    <%= link_to "Home", root_path %>
   <% else %>
   <div class="panel panel-default items">
     <table class="table table-bordered">
