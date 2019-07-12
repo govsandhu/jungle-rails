@@ -1,4 +1,11 @@
+  <% if current_user == review.user%>
+  <div> Your post <div>
+  <%= button_to "delete", product_review_url(params[:id], review), :method => :delete %>
+
+  <% else %>
 <div> <%= review.user.first_name %> </div>
+  <% end %>
 <div><%= review.description %></div>
 <div> Rating: <%= review.rating %> </div>
+
 <br>
