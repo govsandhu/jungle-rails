@@ -27,7 +27,20 @@
     </div>
     <br>
     <div>
-      <% @reviews.each do |review| %>
+
+  <%= form_for :review, url: product_reviews_path({product_id: @product.id}) do |f| %>
+    <%= f.label :description %>
+    <%= f.text_field :description %>
+    <%= f.label :rating %>
+    <%= f.select :rating, 1..5 %> 
+    <%= f.submit "submit" %>
+  <% end %>
+
+
+    </div>
+    <br>
+    <div>
+      <% @reviews.reverse_each do |review| %>
         <%= render 'reviews', review: review %>
       <% end %>
     </div>
