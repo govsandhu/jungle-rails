@@ -38,13 +38,16 @@
     <div class="review-product">
       <% if current_user %>
         <div>
-        <h4> Let us hear your thoughts in the review section! </h3>
+          <h4 class="product-review-header"> Let us hear your thoughts in the review section! </h4>
           <%= form_for :review, url: product_reviews_path({product_id: @product.id}) do |f| %>
-            <%= f.label :description %>
-            <%= f.text_field :description %>
-            <%= f.label :rating %>
-            <%= f.select :rating, 0..5 %>
-            <%= f.submit "Submit" %>
+            <div class="review-rating-select"><%= f.label :rating %>
+              <%= f.select :rating, 0..5 %>
+            </div>
+            <div class="review-text-area">
+              <%= f.label :description %>
+              <%= f.text_area :description %>
+            </div>
+            <div style="float:right"><%= f.submit "Submit", :class =>"btn btn-primary btn-xs" %></div>
           <% end %>
         </div>
       <% end %>

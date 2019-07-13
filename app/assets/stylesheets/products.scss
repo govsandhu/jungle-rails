@@ -90,7 +90,7 @@ main section.categories-show {
   width: 900px;
   margin: auto;
   grid-template-columns: 200px auto 90px;
-  grid-template-rows: 30% 90px auto;
+  grid-template-rows: 30px 90px auto;
 }
 
 .review-current-user {
@@ -133,9 +133,24 @@ main section.categories-show {
 .review-product {
   margin: auto;
   width: 500px;
-  border: 2px slategrey;
+  background-color: ghostwhite;
+  padding: 10px;
+  margin: auto;
+  height: 160px;
+  border-radius: 8px;
+}
+
+.product-review-header {
+  text-align: center;
   font-family: "Fredoka One", cursive;
-  color: dodgerblue;
+}
+
+.review-rating-select {
+  float: right;
+}
+
+.review-text-area textarea{
+  width: 480px;
 }
 
 main section.products-show {
