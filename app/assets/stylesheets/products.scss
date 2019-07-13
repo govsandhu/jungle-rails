@@ -2,24 +2,23 @@
 
 main section.products-index,
 main section.categories-show {
-
   .products {
-    display:         flex;
-    flex-direction:  row;
-    flex-wrap:       wrap;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
     justify-content: space-around;
 
     .product {
       // flex:      1;
       max-width: 260px;
       // so that footer within can be positioned absolutely
-      position:  relative;
+      position: relative;
 
-      border:        1px solid #ccc;
+      border: 1px solid #ccc;
       border-radius: 5px;
-      padding:       15px;
+      padding: 15px;
       padding-bottom: 80px;
-      margin-top:    20px;
+      margin-top: 20px;
       // margin:        10px;
 
       header img {
@@ -32,8 +31,8 @@ main section.categories-show {
       footer {
         position: absolute;
         bottom: 0;
-        left:   0;
-        background-color: #EEE;
+        left: 0;
+        background-color: #eee;
         padding: 15px;
         border-bottom-left-radius: 5px;
         border-bottom-right-radius: 5px;
@@ -66,11 +65,10 @@ main section.categories-show {
       }
 
       &:hover {
-
         border-color: #999;
 
         footer {
-          opacity: 1.0;
+          opacity: 1;
         }
       }
     }
@@ -90,12 +88,12 @@ main section.categories-show {
   width: 900px;
   margin: auto;
   grid-template-columns: 200px auto 90px;
-  grid-template-rows: 30px 90px auto;
+  grid-template-rows: 30px 70px auto;
 }
 
 .review-current-user {
   grid-column-start: 1;
-  grid-row-start: 1; 
+  grid-row-start: 1;
   justify-self: start;
   color: dodgerblue;
   font-family: "Fredoka One", cursive;
@@ -104,7 +102,7 @@ main section.categories-show {
 
 .review-user {
   grid-column-start: 1;
-  grid-row-start: 1; 
+  grid-row-start: 1;
   justify-self: start;
   color: black;
   font-size: 1.1em;
@@ -113,13 +111,13 @@ main section.categories-show {
 
 .delete-review {
   grid-column-start: 3;
-  grid-row-start: 2; 
+  grid-row-start: 2;
   place-self: end;
 }
 
 .review-ratings {
   grid-column-start: 3;
-  grid-row-start: 1; 
+  grid-row-start: 1;
   place-self: center;
 }
 
@@ -135,7 +133,6 @@ main section.categories-show {
   width: 500px;
   background-color: ghostwhite;
   padding: 10px;
-  margin: auto;
   height: 160px;
   border-radius: 8px;
 }
@@ -149,18 +146,14 @@ main section.categories-show {
   float: right;
 }
 
-.review-text-area textarea{
+.review-text-area textarea {
   width: 480px;
 }
 
 main section.products-show {
-
   .product-detail {
     img.main-img {
       max-width: 100%;
     }
   }
 }
-
-
-
