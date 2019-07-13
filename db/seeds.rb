@@ -134,9 +134,9 @@ cat3.products.create!(
 )
 
 User.create! ({
-  first_name: "Govind",
-  last_name: "Sandhu",
-  password: "12345"
+  first_name: 'Govind',
+  last_name: 'Sandhu',
+  password: '12345'
 })
 
 Review.create! ({
