@@ -2,6 +2,8 @@
 
 A mini e-commerce application built with Rails 4.2 for purposes of teaching Rails by example.
 
+  !["Users are able to add items to their carts, provide a product rating and fulfil a purchase using Stripe! Upon purchase, users will receive an email detailing their order."](https://github.com/govsandhu/jungle-rails/tree/master/documents)
+
 
 ## Setup
 
