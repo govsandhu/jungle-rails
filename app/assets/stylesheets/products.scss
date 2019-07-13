@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css?family=Fredoka+One&display=swap");
+
 main section.products-index,
 main section.categories-show {
 
@@ -71,14 +73,69 @@ main section.categories-show {
           opacity: 1.0;
         }
       }
-
-
     }
   }
 }
 
 .checked {
   color: orange;
+}
+
+.reviews {
+  background-color: rgb(243, 240, 240);
+  border: 5px dodgerblue;
+  border-radius: 8px;
+  padding: 30px;
+  display: grid;
+  width: 900px;
+  margin: auto;
+  grid-template-columns: 200px auto 90px;
+  grid-template-rows: 30% 90px auto;
+}
+
+.review-current-user {
+  grid-column-start: 1;
+  grid-row-start: 1; 
+  justify-self: start;
+  color: dodgerblue;
+  font-family: "Fredoka One", cursive;
+  font-size: 1.5em;
+}
+
+.review-user {
+  grid-column-start: 1;
+  grid-row-start: 1; 
+  justify-self: start;
+  color: black;
+  font-size: 1.1em;
+  font-family: "Fredoka One", cursive;
+}
+
+.delete-review {
+  grid-column-start: 3;
+  grid-row-start: 2; 
+  place-self: end;
+}
+
+.review-ratings {
+  grid-column-start: 3;
+  grid-row-start: 1; 
+  place-self: center;
+}
+
+.review-description {
+  grid-column-start: 2;
+  grid-row-start: 2;
+  justify-self: start;
+  font-size: 1.2em;
+}
+
+.review-product {
+  margin: auto;
+  width: 500px;
+  border: 2px slategrey;
+  font-family: "Fredoka One", cursive;
+  color: dodgerblue;
 }
 
 main section.products-show {

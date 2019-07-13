@@ -1,11 +1,18 @@
+<div class="reviews">
+  <div class="review-description"><%= review.description %></div>
+  <div class= "review-ratings"> <% (@product.reviews.average(:rating).to_i).times { %>
+    <span class="fa fa-star checked"></span>
+    <% } %>
+    <% (5 - @product.reviews.average(:rating).to_i).times { %>
+    <span class="fa fa-star"></span>
+    <% } %> </div>
   <% if current_user == review.user%>
-  <div> Your post <div>
-  <%= button_to "delete", product_review_url(params[:id], review), :method => :delete %>
-
+    <div class="review-current-user"> Here's your post! </div>
+    <div class="delete-review"><%= button_to "Delete Post", product_review_url(params[:id], review), :method => :delete, :class => "btn btn-danger btn-xs" %></div>
   <% else %>
-<div> <%= review.user.first_name %> </div>
+    <div class="review-user"> <%= review.user.first_name %> </div>
   <% end %>
-<div><%= review.description %></div>
-<div> Rating: <%= review.rating %> </div>
-
+</div>
 <br>
+<dd>
+</dd>

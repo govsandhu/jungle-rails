@@ -1,17 +1,12 @@
 <section class="products-show">
-
   <header class="page-header">
     <h1><%= link_to @product.category.name, @product.category %> &raquo; <%= @product.name %></h1>
   </header>
-
   <article class="product-detail">
-
     <div class="row">
-
       <div class="col-sm-4">
         <%= image_tag @product.image.url, class: 'main-img' %>
       </div>
-
       <div class="col-sm-8">
         <dl class="dl-horizontal">
           <dt>Name</dt>
@@ -24,40 +19,41 @@
           <dd><%= @product.price %></dd>
           <dt>Overall Rating</dt>
           <% if @product.reviews.length > 0 %>
-          <dd><% (@product.reviews.average(:rating).to_i).times { %>
-          <span class="fa fa-star checked"></span> 
-         <% } %>
-        <% (5 - @product.reviews.average(:rating).to_i).times { %>
-          <span class="fa fa-star"></span> 
-         <% } %>
-         </dd>
+            <dd><% (@product.reviews.average(:rating).to_i).times { %>
+              <span class="fa fa-star checked"></span>
+              <% } %>
+              <% (5 - @product.reviews.average(:rating).to_i).times { %>
+              <span class="fa fa-star"></span>
+              <% } %>
+            </dd>
           <% else %>
-          <dd> This product hasn't been rated </dd>
+            <dd> This product hasn't been rated </dd>
           <% end %>
         </dl>
       </div>
     </div>
     <br>
-
-    <% if current_user %>
-    <div>
-  <%= form_for :review, url: product_reviews_path({product_id: @product.id}) do |f| %>
-    <%= f.label :description %>
-    <%= f.text_field :description %>
-    <%= f.label :rating %>
-    <%= f.select :rating, 0..5 %> 
-    <%= f.submit "submit" %>
-  <% end %>
+    <br>
+    <br>
+    <div class="review-product">
+      <% if current_user %>
+        <div>
+        <h4> Let us hear your thoughts in the review section! </h3>
+          <%= form_for :review, url: product_reviews_path({product_id: @product.id}) do |f| %>
+            <%= f.label :description %>
+            <%= f.text_field :description %>
+            <%= f.label :rating %>
+            <%= f.select :rating, 0..5 %>
+            <%= f.submit "Submit" %>
+          <% end %>
+        </div>
+      <% end %>
     </div>
-    <% end %>
-    
     <br>
     <div>
       <% @reviews.reverse_each do |review| %>
         <%= render 'reviews', review: review %>
       <% end %>
     </div>
-
   </article>
-
 </section>
